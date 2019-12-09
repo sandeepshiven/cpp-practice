@@ -41,7 +41,7 @@ bool find_sub_sum(int a[], int n, int sum){
             curr_sum += a[end];
 
     }
-    return false;
+    return (curr_sum == sum);
 }
 
 
