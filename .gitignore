@@ -11,3 +11,6 @@ gen.cpp
 gen
 gen1.cpp
 gen1
+.sh
+.vscode/launch.json
+.vscode/tasks.json
