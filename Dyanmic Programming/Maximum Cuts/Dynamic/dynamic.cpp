@@ -4,7 +4,7 @@ using namespace std;
 
 int maxCut(int n, int a, int b, int c){
 
-    vector<int>dp(n);
+    vector<int>dp(n+1);
     dp[0] = 0;
     for(int i=1; i<=n; i++){
         dp[i] = -1;
