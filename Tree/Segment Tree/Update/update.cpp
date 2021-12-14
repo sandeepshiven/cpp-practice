@@ -90,6 +90,7 @@ int main(){
                 cout << "Enter index and new val: ";
                 cin >> i >> new_val;
                 int diff = new_val - arr[i];
+                arr[i] = new_val;
                 segT.update(0, n-1, i, 0, diff);
                 break;
             }
