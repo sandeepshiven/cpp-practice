@@ -19,8 +19,8 @@ class Over: public Base{
 class OverAcess: public Base{
     public:
         void print(){
-            // Base::print();
             cout << "This is coming from the derived class OverAcess" << endl;
+            Base::print();
         }
 
 };
@@ -32,7 +32,7 @@ int main(){
 
     Over o;
     o.print();
-
+    o.Base::print();
     OverAcess o2;
     o2.print();
 

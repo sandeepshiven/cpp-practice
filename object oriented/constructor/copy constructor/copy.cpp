@@ -4,7 +4,7 @@ using namespace std;
 
 class Rectangle{
 
-    private:
+    public:
         int length, breadth;
 
     public:
@@ -16,10 +16,10 @@ class Rectangle{
             length = l;
             breadth = b;
         }
-        // Rectangle(Rectangle& rec){
-        //     length = rec.length;
-        //     breadth = rec.breadth;
-        // }
+        Rectangle(const Rectangle& rec){
+            length = rec.length;
+            breadth = rec.breadth;
+        }
 
         void Getlength(){
             cout << "Enter length and breadth: ";
@@ -28,6 +28,9 @@ class Rectangle{
         int area(){
             return (length*breadth);
         }
+        void change(){
+            length = 5;
+        }
         
 
 
@@ -35,13 +38,14 @@ class Rectangle{
 
 int main(){
 
-    Rectangle r1(7,8);
+    Rectangle r1, r2;
+    r1.Getlength();
     cout << r1.area()<<endl;
-    Rectangle r2 = r1;
+    r2 = r1;
     cout << r2.area() << endl;
-    r2.Getlength();
-    cout << r1.area()<<endl;
-    cout << r2.area() << endl;
+    r1.change();
+    cout << (r1.length)<<endl;
+    cout << (r2.length) << endl;
     return 0;
 }
 
